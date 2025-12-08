@@ -1,0 +1,475 @@
+{
+  "vv": {
+    "name": "OpenHands Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "agent": {
+        "shape": "rectangle",
+        "color": "#3b82f6",
+        "description": "AI agent that processes tasks and executes actions"
+      },
+      "llm": {
+        "shape": "rectangle",
+        "color": "#10b981",
+        "description": "Large Language Model interface"
+      },
+      "memory": {
+        "shape": "rectangle",
+        "color": "#8b5cf6",
+        "description": "Agent memory system"
+      },
+      "runtime": {
+        "shape": "rectangle",
+        "color": "#f59e0b",
+        "description": "Execution environment for agents"
+      },
+      "tools": {
+        "shape": "rectangle",
+        "color": "#ef4444",
+        "description": "Available tools for agent execution"
+      },
+      "events": {
+        "shape": "rectangle",
+        "color": "#06b6d4",
+        "description": "Event system for agent communication"
+      },
+      "security": {
+        "shape": "rectangle",
+        "color": "#dc2626",
+        "description": "Security and validation layer"
+      },
+      "browser": {
+        "shape": "rectangle",
+        "color": "#0ea5e9",
+        "description": "Web browser automation"
+      },
+      "docker": {
+        "shape": "rectangle",
+        "color": "#2496ed",
+        "description": "Container runtime"
+      },
+      "mcp": {
+        "shape": "rectangle",
+        "color": "#6366f1",
+        "description": "Model Context Protocol"
+      },
+      "resolver": {
+        "shape": "rectangle",
+        "color": "#84cc16",
+        "description": "Issue resolution system"
+      },
+      "microagent": {
+        "shape": "rectangle",
+        "color": "#f97316",
+        "description": "Specialized micro-agents"
+      },
+      "integrations": {
+        "shape": "rectangle",
+        "color": "#a855f7",
+        "description": "External system integrations"
+      },
+      "storage": {
+        "shape": "rectangle",
+        "color": "#64748b",
+        "description": "Data persistence layer"
+      },
+      "frontend": {
+        "shape": "rectangle",
+        "color": "#ec4899",
+        "description": "Web interface"
+      },
+      "app_server": {
+        "shape": "rectangle",
+        "color": "#14b8a6",
+        "description": "Main application server"
+      }
+    },
+    "edgeTypes": {
+      "api_call": {
+        "style": "solid",
+        "color": "#3b82f6",
+        "description": "API communication"
+      },
+      "data_flow": {
+        "style": "solid",
+        "color": "#10b981",
+        "description": "Data flow between components"
+      },
+      "control_flow": {
+        "style": "dashed",
+        "color": "#f59e0b",
+        "description": "Control flow between components"
+      },
+      "event_flow": {
+        "style": "dotted",
+        "color": "#06b6d4",
+        "description": "Event propagation"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "agent",
+      "type": "text",
+      "x": 400,
+      "y": 115,
+      "width": 120,
+      "height": 60,
+      "text": "Agent",
+      "vv": {
+        "nodeType": "agent",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "llm",
+      "type": "text",
+      "x": 401,
+      "y": -12,
+      "width": 120,
+      "height": 60,
+      "text": "LLM",
+      "vv": {
+        "nodeType": "llm",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "memory",
+      "type": "text",
+      "x": 76,
+      "y": 240,
+      "width": 120,
+      "height": 60,
+      "text": "Memory",
+      "vv": {
+        "nodeType": "memory",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "runtime",
+      "type": "text",
+      "x": 400,
+      "y": 244,
+      "width": 120,
+      "height": 60,
+      "text": "Runtime",
+      "vv": {
+        "nodeType": "runtime",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "tools",
+      "type": "text",
+      "x": 572,
+      "y": 319,
+      "width": 120,
+      "height": 60,
+      "text": "Tools",
+      "vv": {
+        "nodeType": "tools",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "events",
+      "type": "text",
+      "x": 918,
+      "y": 225,
+      "width": 120,
+      "height": 60,
+      "text": "Events",
+      "vv": {
+        "nodeType": "events",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "security",
+      "type": "text",
+      "x": 180,
+      "y": -12,
+      "width": 120,
+      "height": 60,
+      "text": "Security",
+      "vv": {
+        "nodeType": "security",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "browser",
+      "type": "text",
+      "x": 498,
+      "y": 428,
+      "width": 120,
+      "height": 60,
+      "text": "Browser",
+      "vv": {
+        "nodeType": "browser",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "docker",
+      "type": "text",
+      "x": 326,
+      "y": 379,
+      "width": 120,
+      "height": 60,
+      "text": "Docker",
+      "vv": {
+        "nodeType": "docker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "mcp",
+      "type": "text",
+      "x": 645,
+      "y": 428,
+      "width": 120,
+      "height": 60,
+      "text": "MCP",
+      "vv": {
+        "nodeType": "mcp",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "resolver",
+      "type": "text",
+      "x": 254,
+      "y": 245,
+      "width": 120,
+      "height": 60,
+      "text": "Resolver",
+      "vv": {
+        "nodeType": "resolver",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "microagent",
+      "type": "text",
+      "x": -31,
+      "y": -11,
+      "width": 120,
+      "height": 60,
+      "text": "Microagent",
+      "vv": {
+        "nodeType": "microagent",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "integrations",
+      "type": "text",
+      "x": 674,
+      "y": -11,
+      "width": 120,
+      "height": 60,
+      "text": "Integrations",
+      "vv": {
+        "nodeType": "integrations",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "storage",
+      "type": "text",
+      "x": 405,
+      "y": 751,
+      "width": 120,
+      "height": 60,
+      "text": "Storage",
+      "vv": {
+        "nodeType": "storage",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "frontend",
+      "type": "text",
+      "x": 772,
+      "y": 575,
+      "width": 120,
+      "height": 60,
+      "text": "Frontend",
+      "vv": {
+        "nodeType": "frontend",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "app_server",
+      "type": "text",
+      "x": 771,
+      "y": 667,
+      "width": 120,
+      "height": 60,
+      "text": "App Server",
+      "vv": {
+        "nodeType": "app_server",
+        "shape": "rectangle"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "llm_to_agent",
+      "fromNode": "llm",
+      "toNode": "agent",
+      "text": "LLM API",
+      "vv": {
+        "edgeType": "api_call"
+      }
+    },
+    {
+      "id": "agent_to_memory",
+      "fromNode": "agent",
+      "toNode": "memory",
+      "text": "Store/Retrieve",
+      "vv": {
+        "edgeType": "data_flow"
+      }
+    },
+    {
+      "id": "agent_to_runtime",
+      "fromNode": "agent",
+      "toNode": "runtime",
+      "text": "Execute",
+      "vv": {
+        "edgeType": "control_flow"
+      }
+    },
+    {
+      "id": "runtime_to_tools",
+      "fromNode": "runtime",
+      "toNode": "tools",
+      "text": "Use Tools",
+      "vv": {
+        "edgeType": "control_flow"
+      }
+    },
+    {
+      "id": "agent_to_events",
+      "fromNode": "agent",
+      "toNode": "events",
+      "text": "Emit Events",
+      "vv": {
+        "edgeType": "event_flow"
+      }
+    },
+    {
+      "id": "security_to_agent",
+      "fromNode": "security",
+      "toNode": "agent",
+      "text": "Validate",
+      "vv": {
+        "edgeType": "control_flow"
+      }
+    },
+    {
+      "id": "tools_to_browser",
+      "fromNode": "tools",
+      "toNode": "browser",
+      "text": "Browser API",
+      "vv": {
+        "edgeType": "api_call"
+      }
+    },
+    {
+      "id": "runtime_to_docker",
+      "fromNode": "runtime",
+      "toNode": "docker",
+      "text": "Container API",
+      "vv": {
+        "edgeType": "api_call"
+      }
+    },
+    {
+      "id": "tools_to_mcp",
+      "fromNode": "tools",
+      "toNode": "mcp",
+      "text": "MCP Protocol",
+      "vv": {
+        "edgeType": "api_call"
+      }
+    },
+    {
+      "id": "agent_to_resolver",
+      "fromNode": "agent",
+      "toNode": "resolver",
+      "text": "Resolve Issues",
+      "vv": {
+        "edgeType": "control_flow"
+      }
+    },
+    {
+      "id": "microagent_to_agent",
+      "fromNode": "microagent",
+      "toNode": "agent",
+      "text": "Specialized Tasks",
+      "vv": {
+        "edgeType": "control_flow"
+      }
+    },
+    {
+      "id": "integrations_to_agent",
+      "fromNode": "integrations",
+      "toNode": "agent",
+      "text": "External Data",
+      "vv": {
+        "edgeType": "data_flow"
+      }
+    },
+    {
+      "id": "events_to_storage",
+      "fromNode": "events",
+      "toNode": "storage",
+      "text": "Persist Events",
+      "vv": {
+        "edgeType": "data_flow"
+      }
+    },
+    {
+      "id": "memory_to_storage",
+      "fromNode": "memory",
+      "toNode": "storage",
+      "text": "Persist Memory",
+      "vv": {
+        "edgeType": "data_flow"
+      }
+    },
+    {
+      "id": "frontend_to_app_server",
+      "fromNode": "frontend",
+      "toNode": "app_server",
+      "text": "Web API",
+      "vv": {
+        "edgeType": "api_call"
+      }
+    },
+    {
+      "id": "app_server_to_storage",
+      "fromNode": "app_server",
+      "toNode": "storage",
+      "text": "Data Access",
+      "vv": {
+        "edgeType": "data_flow"
+      }
+    },
+    {
+      "id": "docker_to_storage",
+      "fromNode": "docker",
+      "toNode": "storage",
+      "text": "Container Data",
+      "vv": {
+        "edgeType": "data_flow"
+      }
+    }
+  ]
+}

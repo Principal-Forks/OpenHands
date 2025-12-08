@@ -1,0 +1,489 @@
+{
+  "vv": {
+    "name": "OpenHands Agent Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "agent": {
+        "shape": "rectangle",
+        "color": "#3b82f6",
+        "description": "AI agent implementation"
+      },
+      "codeact": {
+        "shape": "rectangle",
+        "color": "#10b981",
+        "description": "CodeAct agent for coding tasks"
+      },
+      "browsing": {
+        "shape": "rectangle",
+        "color": "#06b6d4",
+        "description": "Browsing agent for web tasks"
+      },
+      "readonly": {
+        "shape": "rectangle",
+        "color": "#8b5cf6",
+        "description": "Readonly agent for analysis"
+      },
+      "loc": {
+        "shape": "rectangle",
+        "color": "#f59e0b",
+        "description": "LOC agent for code exploration"
+      },
+      "tool": {
+        "shape": "rectangle",
+        "color": "#ef4444",
+        "description": "Agent tool"
+      },
+      "prompt": {
+        "shape": "rectangle",
+        "color": "#84cc16",
+        "description": "Prompt template"
+      },
+      "llm": {
+        "shape": "rectangle",
+        "color": "#dc2626",
+        "description": "LLM interface"
+      },
+      "memory": {
+        "shape": "rectangle",
+        "color": "#a855f7",
+        "description": "Agent memory"
+      },
+      "parser": {
+        "shape": "rectangle",
+        "color": "#64748b",
+        "description": "Response parser"
+      },
+      "function_calling": {
+        "shape": "rectangle",
+        "color": "#f97316",
+        "description": "Function calling interface"
+      }
+    },
+    "edgeTypes": {
+      "uses": {
+        "style": "solid",
+        "color": "#3b82f6",
+        "description": "Agent uses tool"
+      },
+      "extends": {
+        "style": "dashed",
+        "color": "#10b981",
+        "description": "Agent extends base agent"
+      },
+      "calls": {
+        "style": "solid",
+        "color": "#f59e0b",
+        "description": "Calls LLM or service"
+      },
+      "loads": {
+        "style": "dotted",
+        "color": "#8b5cf6",
+        "description": "Loads prompt template"
+      },
+      "parses": {
+        "style": "solid",
+        "color": "#64748b",
+        "description": "Parses response"
+      },
+      "stores": {
+        "style": "dashed",
+        "color": "#a855f7",
+        "description": "Stores in memory"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "base_agent",
+      "type": "text",
+      "x": 567,
+      "y": -167,
+      "width": 120,
+      "height": 60,
+      "text": "Base Agent",
+      "vv": {
+        "nodeType": "agent"
+      }
+    },
+    {
+      "id": "codeact_agent",
+      "type": "text",
+      "x": 104,
+      "y": 81,
+      "width": 120,
+      "height": 60,
+      "text": "CodeAct Agent",
+      "vv": {
+        "nodeType": "codeact"
+      }
+    },
+    {
+      "id": "browsing_agent",
+      "type": "text",
+      "x": 560,
+      "y": 86,
+      "width": 120,
+      "height": 60,
+      "text": "Browsing Agent",
+      "vv": {
+        "nodeType": "browsing"
+      }
+    },
+    {
+      "id": "readonly_agent",
+      "type": "text",
+      "x": 829,
+      "y": 81,
+      "width": 120,
+      "height": 60,
+      "text": "Readonly Agent",
+      "vv": {
+        "nodeType": "readonly"
+      }
+    },
+    {
+      "id": "loc_agent",
+      "type": "text",
+      "x": 1059,
+      "y": 80,
+      "width": 120,
+      "height": 60,
+      "text": "LOC Agent",
+      "vv": {
+        "nodeType": "loc"
+      }
+    },
+    {
+      "id": "bash_tool",
+      "type": "text",
+      "x": -27,
+      "y": 314,
+      "width": 100,
+      "height": 60,
+      "text": "Bash",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "editor_tool",
+      "type": "text",
+      "x": -180,
+      "y": 315,
+      "width": 100,
+      "height": 60,
+      "text": "Editor",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "browser_tool",
+      "type": "text",
+      "x": 568,
+      "y": 187,
+      "width": 100,
+      "height": 60,
+      "text": "Browser",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "ipython_tool",
+      "type": "text",
+      "x": -346,
+      "y": 315,
+      "width": 100,
+      "height": 60,
+      "text": "IPython",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "view_tool",
+      "type": "text",
+      "x": 790,
+      "y": 206,
+      "width": 100,
+      "height": 60,
+      "text": "View",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "search_tool",
+      "type": "text",
+      "x": 912,
+      "y": 204,
+      "width": 100,
+      "height": 60,
+      "text": "Search",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "explore_tool",
+      "type": "text",
+      "x": 1059,
+      "y": 201,
+      "width": 100,
+      "height": 60,
+      "text": "Explore",
+      "vv": {
+        "nodeType": "tool"
+      }
+    },
+    {
+      "id": "system_prompt",
+      "type": "text",
+      "x": 572,
+      "y": 320,
+      "width": 120,
+      "height": 60,
+      "text": "System Prompt",
+      "vv": {
+        "nodeType": "prompt"
+      }
+    },
+    {
+      "id": "user_prompt",
+      "type": "text",
+      "x": 414,
+      "y": 319,
+      "width": 120,
+      "height": 60,
+      "text": "User Prompt",
+      "vv": {
+        "nodeType": "prompt"
+      }
+    },
+    {
+      "id": "llm_interface",
+      "type": "text",
+      "x": 259,
+      "y": 316,
+      "width": 120,
+      "height": 60,
+      "text": "LLM Interface",
+      "vv": {
+        "nodeType": "llm"
+      }
+    },
+    {
+      "id": "agent_memory",
+      "type": "text",
+      "x": 110,
+      "y": 315,
+      "width": 120,
+      "height": 60,
+      "text": "Agent Memory",
+      "vv": {
+        "nodeType": "memory"
+      }
+    },
+    {
+      "id": "response_parser",
+      "type": "text",
+      "x": 254,
+      "y": 450,
+      "width": 120,
+      "height": 60,
+      "text": "Response Parser",
+      "vv": {
+        "nodeType": "parser"
+      }
+    },
+    {
+      "id": "function_calling",
+      "type": "text",
+      "x": 251,
+      "y": 583,
+      "width": 120,
+      "height": 60,
+      "text": "Function Calling",
+      "vv": {
+        "nodeType": "function_calling"
+      }
+    },
+    {
+      "id": "security_utils",
+      "type": "text",
+      "x": -44,
+      "y": 420,
+      "width": 120,
+      "height": 60,
+      "text": "Security Utils",
+      "vv": {
+        "nodeType": "tool"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "codeact_extends_base",
+      "fromNode": "base_agent",
+      "toNode": "codeact_agent",
+      "text": "extends",
+      "vv": {
+        "edgeType": "extends"
+      }
+    },
+    {
+      "id": "browsing_extends_base",
+      "fromNode": "base_agent",
+      "toNode": "browsing_agent",
+      "text": "extends",
+      "vv": {
+        "edgeType": "extends"
+      }
+    },
+    {
+      "id": "readonly_extends_base",
+      "fromNode": "base_agent",
+      "toNode": "readonly_agent",
+      "text": "extends",
+      "vv": {
+        "edgeType": "extends"
+      }
+    },
+    {
+      "id": "loc_extends_base",
+      "fromNode": "base_agent",
+      "toNode": "loc_agent",
+      "text": "extends",
+      "vv": {
+        "edgeType": "extends"
+      }
+    },
+    {
+      "id": "codeact_uses_bash",
+      "fromNode": "codeact_agent",
+      "toNode": "bash_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "codeact_uses_editor",
+      "fromNode": "codeact_agent",
+      "toNode": "editor_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "codeact_uses_ipython",
+      "fromNode": "codeact_agent",
+      "toNode": "ipython_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "browsing_uses_browser",
+      "fromNode": "browsing_agent",
+      "toNode": "browser_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "readonly_uses_view",
+      "fromNode": "readonly_agent",
+      "toNode": "view_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "readonly_uses_search",
+      "fromNode": "readonly_agent",
+      "toNode": "search_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "loc_uses_explore",
+      "fromNode": "loc_agent",
+      "toNode": "explore_tool",
+      "text": "uses",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "agents_load_system",
+      "fromNode": "codeact_agent",
+      "toNode": "system_prompt",
+      "text": "loads",
+      "vv": {
+        "edgeType": "loads"
+      }
+    },
+    {
+      "id": "agents_load_user",
+      "fromNode": "codeact_agent",
+      "toNode": "user_prompt",
+      "text": "loads",
+      "vv": {
+        "edgeType": "loads"
+      }
+    },
+    {
+      "id": "agents_call_llm",
+      "fromNode": "codeact_agent",
+      "toNode": "llm_interface",
+      "text": "calls",
+      "vv": {
+        "edgeType": "calls"
+      }
+    },
+    {
+      "id": "agents_use_memory",
+      "fromNode": "codeact_agent",
+      "toNode": "agent_memory",
+      "text": "stores",
+      "vv": {
+        "edgeType": "stores"
+      }
+    },
+    {
+      "id": "agents_parse_response",
+      "fromNode": "llm_interface",
+      "toNode": "response_parser",
+      "text": "parses",
+      "vv": {
+        "edgeType": "parses"
+      }
+    },
+    {
+      "id": "agents_function_call",
+      "fromNode": "response_parser",
+      "toNode": "function_calling",
+      "text": "calls",
+      "vv": {
+        "edgeType": "calls"
+      }
+    },
+    {
+      "id": "tools_security_check",
+      "fromNode": "bash_tool",
+      "toNode": "security_utils",
+      "text": "validates",
+      "vv": {
+        "edgeType": "uses"
+      }
+    }
+  ]
+}

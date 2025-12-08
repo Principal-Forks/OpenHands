@@ -1,0 +1,483 @@
+{
+  "vv": {
+    "name": "OpenHands Backend Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "app": {
+        "shape": "rectangle",
+        "color": "#3b82f6",
+        "description": "FastAPI application"
+      },
+      "router": {
+        "shape": "rectangle",
+        "color": "#10b981",
+        "description": "API router"
+      },
+      "route": {
+        "shape": "rectangle",
+        "color": "#06b6d4",
+        "description": "API route endpoint"
+      },
+      "service": {
+        "shape": "rectangle",
+        "color": "#f59e0b",
+        "description": "Business logic service"
+      },
+      "manager": {
+        "shape": "rectangle",
+        "color": "#ef4444",
+        "description": "Conversation manager"
+      },
+      "session": {
+        "shape": "rectangle",
+        "color": "#8b5cf6",
+        "description": "Session management"
+      },
+      "auth": {
+        "shape": "rectangle",
+        "color": "#dc2626",
+        "description": "Authentication service"
+      },
+      "middleware": {
+        "shape": "rectangle",
+        "color": "#84cc16",
+        "description": "Middleware component"
+      },
+      "config": {
+        "shape": "rectangle",
+        "color": "#64748b",
+        "description": "Configuration"
+      },
+      "data_model": {
+        "shape": "rectangle",
+        "color": "#f97316",
+        "description": "Data model/Pydantic model"
+      },
+      "websocket": {
+        "shape": "rectangle",
+        "color": "#a855f7",
+        "description": "WebSocket handler"
+      },
+      "file_service": {
+        "shape": "rectangle",
+        "color": "#14b8a6",
+        "description": "File management service"
+      },
+      "monitoring": {
+        "shape": "rectangle",
+        "color": "#ec4899",
+        "description": "Monitoring and logging"
+      }
+    },
+    "edgeTypes": {
+      "handles": {
+        "style": "solid",
+        "color": "#3b82f6",
+        "description": "Route handles HTTP requests"
+      },
+      "calls": {
+        "style": "solid",
+        "color": "#f59e0b",
+        "description": "Service calls another service"
+      },
+      "manages": {
+        "style": "dashed",
+        "color": "#ef4444",
+        "description": "Manager coordinates components"
+      },
+      "authenticates": {
+        "style": "solid",
+        "color": "#dc2626",
+        "description": "Authentication check"
+      },
+      "configures": {
+        "style": "dotted",
+        "color": "#64748b",
+        "description": "Configuration dependency"
+      },
+      "websocket": {
+        "style": "dashed",
+        "color": "#a855f7",
+        "description": "WebSocket communication"
+      },
+      "validates": {
+        "style": "solid",
+        "color": "#84cc16",
+        "description": "Data validation"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "fastapi_app",
+      "type": "text",
+      "x": 400,
+      "y": -25,
+      "width": 120,
+      "height": 60,
+      "text": "FastAPI App",
+      "vv": {
+        "nodeType": "app"
+      }
+    },
+    {
+      "id": "api_router",
+      "type": "text",
+      "x": 685,
+      "y": 82,
+      "width": 120,
+      "height": 60,
+      "text": "API Router",
+      "vv": {
+        "nodeType": "router"
+      }
+    },
+    {
+      "id": "conversation_route",
+      "type": "text",
+      "x": 473,
+      "y": 203,
+      "width": 120,
+      "height": 60,
+      "text": "Conversation",
+      "vv": {
+        "nodeType": "route"
+      }
+    },
+    {
+      "id": "files_route",
+      "type": "text",
+      "x": 868,
+      "y": 198,
+      "width": 120,
+      "height": 60,
+      "text": "Files",
+      "vv": {
+        "nodeType": "route"
+      }
+    },
+    {
+      "id": "settings_route",
+      "type": "text",
+      "x": 677,
+      "y": 201,
+      "width": 120,
+      "height": 60,
+      "text": "Settings",
+      "vv": {
+        "nodeType": "route"
+      }
+    },
+    {
+      "id": "conversation_manager",
+      "type": "text",
+      "x": 466,
+      "y": 487,
+      "width": 120,
+      "height": 60,
+      "text": "Conversation Manager",
+      "vv": {
+        "nodeType": "manager"
+      }
+    },
+    {
+      "id": "conversation_service",
+      "type": "text",
+      "x": 270,
+      "y": 631,
+      "width": 120,
+      "height": 60,
+      "text": "Conversation Service",
+      "vv": {
+        "nodeType": "service"
+      }
+    },
+    {
+      "id": "file_service",
+      "type": "text",
+      "x": 868,
+      "y": 309,
+      "width": 120,
+      "height": 60,
+      "text": "File Service",
+      "vv": {
+        "nodeType": "file_service"
+      }
+    },
+    {
+      "id": "session_manager",
+      "type": "text",
+      "x": 484,
+      "y": 626,
+      "width": 120,
+      "height": 60,
+      "text": "Session Manager",
+      "vv": {
+        "nodeType": "session"
+      }
+    },
+    {
+      "id": "agent_session",
+      "type": "text",
+      "x": 492,
+      "y": 766,
+      "width": 120,
+      "height": 60,
+      "text": "Agent Session",
+      "vv": {
+        "nodeType": "session"
+      }
+    },
+    {
+      "id": "websocket_handler",
+      "type": "text",
+      "x": 696,
+      "y": 483,
+      "width": 120,
+      "height": 60,
+      "text": "WebSocket Handler",
+      "vv": {
+        "nodeType": "websocket"
+      }
+    },
+    {
+      "id": "auth_service",
+      "type": "text",
+      "x": 685,
+      "y": 312,
+      "width": 120,
+      "height": 60,
+      "text": "Auth Service",
+      "vv": {
+        "nodeType": "auth"
+      }
+    },
+    {
+      "id": "middleware",
+      "type": "text",
+      "x": 194,
+      "y": 90,
+      "width": 120,
+      "height": 60,
+      "text": "Middleware",
+      "vv": {
+        "nodeType": "middleware"
+      }
+    },
+    {
+      "id": "config",
+      "type": "text",
+      "x": 400,
+      "y": 90,
+      "width": 120,
+      "height": 60,
+      "text": "Config",
+      "vv": {
+        "nodeType": "config"
+      }
+    },
+    {
+      "id": "monitoring",
+      "type": "text",
+      "x": 0,
+      "y": 89,
+      "width": 120,
+      "height": 60,
+      "text": "Monitoring",
+      "vv": {
+        "nodeType": "monitoring"
+      }
+    },
+    {
+      "id": "data_models",
+      "type": "text",
+      "x": 276,
+      "y": 488,
+      "width": 120,
+      "height": 60,
+      "text": "Data Models",
+      "vv": {
+        "nodeType": "data_model"
+      }
+    },
+    {
+      "id": "conversation_info",
+      "type": "text",
+      "x": 280,
+      "y": 766,
+      "width": 120,
+      "height": 60,
+      "text": "Conversation Info",
+      "vv": {
+        "nodeType": "data_model"
+      }
+    },
+    {
+      "id": "agent_loop_info",
+      "type": "text",
+      "x": 673,
+      "y": 623,
+      "width": 120,
+      "height": 60,
+      "text": "Agent Loop Info",
+      "vv": {
+        "nodeType": "data_model"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "app_to_router",
+      "fromNode": "fastapi_app",
+      "toNode": "api_router",
+      "text": "includes",
+      "vv": {
+        "edgeType": "handles"
+      }
+    },
+    {
+      "id": "router_to_conversation",
+      "fromNode": "api_router",
+      "toNode": "conversation_route",
+      "text": "routes",
+      "vv": {
+        "edgeType": "handles"
+      }
+    },
+    {
+      "id": "router_to_files",
+      "fromNode": "api_router",
+      "toNode": "files_route",
+      "text": "routes",
+      "vv": {
+        "edgeType": "handles"
+      }
+    },
+    {
+      "id": "router_to_settings",
+      "fromNode": "api_router",
+      "toNode": "settings_route",
+      "text": "routes",
+      "vv": {
+        "edgeType": "handles"
+      }
+    },
+    {
+      "id": "conversation_to_manager",
+      "fromNode": "conversation_route",
+      "toNode": "conversation_manager",
+      "text": "calls",
+      "vv": {
+        "edgeType": "calls"
+      }
+    },
+    {
+      "id": "manager_to_service",
+      "fromNode": "conversation_manager",
+      "toNode": "conversation_service",
+      "text": "manages",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "files_to_service",
+      "fromNode": "files_route",
+      "toNode": "file_service",
+      "text": "calls",
+      "vv": {
+        "edgeType": "calls"
+      }
+    },
+    {
+      "id": "manager_to_session",
+      "fromNode": "conversation_manager",
+      "toNode": "session_manager",
+      "text": "manages",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "session_to_agent",
+      "fromNode": "session_manager",
+      "toNode": "agent_session",
+      "text": "creates",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "conversation_to_websocket",
+      "fromNode": "conversation_route",
+      "toNode": "websocket_handler",
+      "text": "websocket",
+      "vv": {
+        "edgeType": "websocket"
+      }
+    },
+    {
+      "id": "settings_to_auth",
+      "fromNode": "settings_route",
+      "toNode": "auth_service",
+      "text": "authenticates",
+      "vv": {
+        "edgeType": "authenticates"
+      }
+    },
+    {
+      "id": "app_to_middleware",
+      "fromNode": "fastapi_app",
+      "toNode": "middleware",
+      "text": "applies",
+      "vv": {
+        "edgeType": "validates"
+      }
+    },
+    {
+      "id": "app_to_config",
+      "fromNode": "fastapi_app",
+      "toNode": "config",
+      "text": "configures",
+      "vv": {
+        "edgeType": "configures"
+      }
+    },
+    {
+      "id": "app_to_monitoring",
+      "fromNode": "fastapi_app",
+      "toNode": "monitoring",
+      "text": "monitors",
+      "vv": {
+        "edgeType": "validates"
+      }
+    },
+    {
+      "id": "routes_to_models",
+      "fromNode": "conversation_route",
+      "toNode": "data_models",
+      "text": "validates",
+      "vv": {
+        "edgeType": "validates"
+      }
+    },
+    {
+      "id": "service_to_conversation_info",
+      "fromNode": "conversation_service",
+      "toNode": "conversation_info",
+      "text": "uses",
+      "vv": {
+        "edgeType": "calls"
+      }
+    },
+    {
+      "id": "manager_to_agent_loop",
+      "fromNode": "conversation_manager",
+      "toNode": "agent_loop_info",
+      "text": "tracks",
+      "vv": {
+        "edgeType": "manages"
+      }
+    }
+  ]
+}
