@@ -1,5 +1,5 @@
 {
-  "vv": {
+  "pv": {
     "name": "OpenHands Architecture",
     "version": "1.0.0",
     "nodeTypes": {
@@ -87,23 +87,19 @@
     "edgeTypes": {
       "api_call": {
         "style": "solid",
-        "color": "#3b82f6",
-        "description": "API communication"
+        "color": "#3b82f6"
       },
       "data_flow": {
         "style": "solid",
-        "color": "#10b981",
-        "description": "Data flow between components"
+        "color": "#10b981"
       },
       "control_flow": {
         "style": "dashed",
-        "color": "#f59e0b",
-        "description": "Control flow between components"
+        "color": "#f59e0b"
       },
       "event_flow": {
         "style": "dotted",
-        "color": "#06b6d4",
-        "description": "Event propagation"
+        "color": "#06b6d4"
       }
     }
   },
@@ -116,7 +112,7 @@
       "width": 120,
       "height": 60,
       "text": "Agent",
-      "vv": {
+      "pv": {
         "nodeType": "agent",
         "shape": "rectangle"
       }
@@ -129,7 +125,7 @@
       "width": 120,
       "height": 60,
       "text": "LLM",
-      "vv": {
+      "pv": {
         "nodeType": "llm",
         "shape": "rectangle"
       }
@@ -142,7 +138,7 @@
       "width": 120,
       "height": 60,
       "text": "Memory",
-      "vv": {
+      "pv": {
         "nodeType": "memory",
         "shape": "rectangle"
       }
@@ -155,7 +151,7 @@
       "width": 120,
       "height": 60,
       "text": "Runtime",
-      "vv": {
+      "pv": {
         "nodeType": "runtime",
         "shape": "rectangle"
       }
@@ -168,7 +164,7 @@
       "width": 120,
       "height": 60,
       "text": "Tools",
-      "vv": {
+      "pv": {
         "nodeType": "tools",
         "shape": "rectangle"
       }
@@ -181,7 +177,7 @@
       "width": 120,
       "height": 60,
       "text": "Events",
-      "vv": {
+      "pv": {
         "nodeType": "events",
         "shape": "rectangle"
       }
@@ -194,7 +190,7 @@
       "width": 120,
       "height": 60,
       "text": "Security",
-      "vv": {
+      "pv": {
         "nodeType": "security",
         "shape": "rectangle"
       }
@@ -207,7 +203,7 @@
       "width": 120,
       "height": 60,
       "text": "Browser",
-      "vv": {
+      "pv": {
         "nodeType": "browser",
         "shape": "rectangle"
       }
@@ -220,7 +216,7 @@
       "width": 120,
       "height": 60,
       "text": "Docker",
-      "vv": {
+      "pv": {
         "nodeType": "docker",
         "shape": "rectangle"
       }
@@ -233,7 +229,7 @@
       "width": 120,
       "height": 60,
       "text": "MCP",
-      "vv": {
+      "pv": {
         "nodeType": "mcp",
         "shape": "rectangle"
       }
@@ -246,7 +242,7 @@
       "width": 120,
       "height": 60,
       "text": "Resolver",
-      "vv": {
+      "pv": {
         "nodeType": "resolver",
         "shape": "rectangle"
       }
@@ -259,7 +255,7 @@
       "width": 120,
       "height": 60,
       "text": "Microagent",
-      "vv": {
+      "pv": {
         "nodeType": "microagent",
         "shape": "rectangle"
       }
@@ -272,7 +268,7 @@
       "width": 120,
       "height": 60,
       "text": "Integrations",
-      "vv": {
+      "pv": {
         "nodeType": "integrations",
         "shape": "rectangle"
       }
@@ -285,7 +281,7 @@
       "width": 120,
       "height": 60,
       "text": "Storage",
-      "vv": {
+      "pv": {
         "nodeType": "storage",
         "shape": "rectangle"
       }
@@ -298,7 +294,7 @@
       "width": 120,
       "height": 60,
       "text": "Frontend",
-      "vv": {
+      "pv": {
         "nodeType": "frontend",
         "shape": "rectangle"
       }
@@ -311,7 +307,7 @@
       "width": 120,
       "height": 60,
       "text": "App Server",
-      "vv": {
+      "pv": {
         "nodeType": "app_server",
         "shape": "rectangle"
       }
@@ -322,8 +318,8 @@
       "id": "llm_to_agent",
       "fromNode": "llm",
       "toNode": "agent",
-      "text": "LLM API",
-      "vv": {
+      "label": "LLM API",
+      "pv": {
         "edgeType": "api_call"
       }
     },
@@ -331,8 +327,8 @@
       "id": "agent_to_memory",
       "fromNode": "agent",
       "toNode": "memory",
-      "text": "Store/Retrieve",
-      "vv": {
+      "label": "Store/Retrieve",
+      "pv": {
         "edgeType": "data_flow"
       }
     },
@@ -340,8 +336,8 @@
       "id": "agent_to_runtime",
       "fromNode": "agent",
       "toNode": "runtime",
-      "text": "Execute",
-      "vv": {
+      "label": "Execute",
+      "pv": {
         "edgeType": "control_flow"
       }
     },
@@ -349,8 +345,8 @@
       "id": "runtime_to_tools",
       "fromNode": "runtime",
       "toNode": "tools",
-      "text": "Use Tools",
-      "vv": {
+      "label": "Use Tools",
+      "pv": {
         "edgeType": "control_flow"
       }
     },
@@ -358,8 +354,8 @@
       "id": "agent_to_events",
       "fromNode": "agent",
       "toNode": "events",
-      "text": "Emit Events",
-      "vv": {
+      "label": "Emit Events",
+      "pv": {
         "edgeType": "event_flow"
       }
     },
@@ -367,8 +363,8 @@
       "id": "security_to_agent",
       "fromNode": "security",
       "toNode": "agent",
-      "text": "Validate",
-      "vv": {
+      "label": "Validate",
+      "pv": {
         "edgeType": "control_flow"
       }
     },
@@ -376,8 +372,8 @@
       "id": "tools_to_browser",
       "fromNode": "tools",
       "toNode": "browser",
-      "text": "Browser API",
-      "vv": {
+      "label": "Browser API",
+      "pv": {
         "edgeType": "api_call"
       }
     },
@@ -385,8 +381,8 @@
       "id": "runtime_to_docker",
       "fromNode": "runtime",
       "toNode": "docker",
-      "text": "Container API",
-      "vv": {
+      "label": "Container API",
+      "pv": {
         "edgeType": "api_call"
       }
     },
@@ -394,8 +390,8 @@
       "id": "tools_to_mcp",
       "fromNode": "tools",
       "toNode": "mcp",
-      "text": "MCP Protocol",
-      "vv": {
+      "label": "MCP Protocol",
+      "pv": {
         "edgeType": "api_call"
       }
     },
@@ -403,8 +399,8 @@
       "id": "agent_to_resolver",
       "fromNode": "agent",
       "toNode": "resolver",
-      "text": "Resolve Issues",
-      "vv": {
+      "label": "Resolve Issues",
+      "pv": {
         "edgeType": "control_flow"
       }
     },
@@ -412,8 +408,8 @@
       "id": "microagent_to_agent",
       "fromNode": "microagent",
       "toNode": "agent",
-      "text": "Specialized Tasks",
-      "vv": {
+      "label": "Specialized Tasks",
+      "pv": {
         "edgeType": "control_flow"
       }
     },
@@ -421,8 +417,8 @@
       "id": "integrations_to_agent",
       "fromNode": "integrations",
       "toNode": "agent",
-      "text": "External Data",
-      "vv": {
+      "label": "External Data",
+      "pv": {
         "edgeType": "data_flow"
       }
     },
@@ -430,8 +426,8 @@
       "id": "events_to_storage",
       "fromNode": "events",
       "toNode": "storage",
-      "text": "Persist Events",
-      "vv": {
+      "label": "Persist Events",
+      "pv": {
         "edgeType": "data_flow"
       }
     },
@@ -439,8 +435,8 @@
       "id": "memory_to_storage",
       "fromNode": "memory",
       "toNode": "storage",
-      "text": "Persist Memory",
-      "vv": {
+      "label": "Persist Memory",
+      "pv": {
         "edgeType": "data_flow"
       }
     },
@@ -448,8 +444,8 @@
       "id": "frontend_to_app_server",
       "fromNode": "frontend",
       "toNode": "app_server",
-      "text": "Web API",
-      "vv": {
+      "label": "Web API",
+      "pv": {
         "edgeType": "api_call"
       }
     },
@@ -457,8 +453,8 @@
       "id": "app_server_to_storage",
       "fromNode": "app_server",
       "toNode": "storage",
-      "text": "Data Access",
-      "vv": {
+      "label": "Data Access",
+      "pv": {
         "edgeType": "data_flow"
       }
     },
@@ -466,8 +462,8 @@
       "id": "docker_to_storage",
       "fromNode": "docker",
       "toNode": "storage",
-      "text": "Container Data",
-      "vv": {
+      "label": "Container Data",
+      "pv": {
         "edgeType": "data_flow"
       }
     }

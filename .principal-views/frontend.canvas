@@ -1,5 +1,5 @@
 {
-  "vv": {
+  "pv": {
     "name": "OpenHands Frontend Architecture",
     "version": "1.0.0",
     "nodeTypes": {
@@ -87,38 +87,31 @@
     "edgeTypes": {
       "renders": {
         "style": "solid",
-        "color": "#3b82f6",
-        "description": "Component renders another component"
+        "color": "#3b82f6"
       },
       "navigates": {
         "style": "solid",
-        "color": "#10b981",
-        "description": "Navigation between routes"
+        "color": "#10b981"
       },
       "calls": {
         "style": "solid",
-        "color": "#f59e0b",
-        "description": "API or service call"
+        "color": "#f59e0b"
       },
       "provides": {
         "style": "dashed",
-        "color": "#ef4444",
-        "description": "Context provides data"
+        "color": "#ef4444"
       },
       "uses": {
         "style": "dotted",
-        "color": "#8b5cf6",
-        "description": "Component uses context or service"
+        "color": "#8b5cf6"
       },
       "imports": {
         "style": "solid",
-        "color": "#64748b",
-        "description": "Import dependency"
+        "color": "#64748b"
       },
       "websocket": {
         "style": "dashed",
-        "color": "#a855f7",
-        "description": "WebSocket communication"
+        "color": "#a855f7"
       }
     }
   },
@@ -131,7 +124,7 @@
       "width": 120,
       "height": 60,
       "text": "App",
-      "vv": {
+      "pv": {
         "nodeType": "app"
       }
     },
@@ -143,7 +136,7 @@
       "width": 120,
       "height": 60,
       "text": "Router",
-      "vv": {
+      "pv": {
         "nodeType": "router"
       }
     },
@@ -155,7 +148,7 @@
       "width": 120,
       "height": 60,
       "text": "Root Layout",
-      "vv": {
+      "pv": {
         "nodeType": "route"
       }
     },
@@ -167,7 +160,7 @@
       "width": 120,
       "height": 60,
       "text": "Conversation",
-      "vv": {
+      "pv": {
         "nodeType": "route"
       }
     },
@@ -179,7 +172,7 @@
       "width": 120,
       "height": 60,
       "text": "Settings",
-      "vv": {
+      "pv": {
         "nodeType": "route"
       }
     },
@@ -191,7 +184,7 @@
       "width": 120,
       "height": 60,
       "text": "WebSocket Context",
-      "vv": {
+      "pv": {
         "nodeType": "context"
       }
     },
@@ -203,7 +196,7 @@
       "width": 120,
       "height": 60,
       "text": "Chat Service",
-      "vv": {
+      "pv": {
         "nodeType": "service"
       }
     },
@@ -215,7 +208,7 @@
       "width": 120,
       "height": 60,
       "text": "Actions Service",
-      "vv": {
+      "pv": {
         "nodeType": "service"
       }
     },
@@ -227,7 +220,7 @@
       "width": 120,
       "height": 60,
       "text": "Terminal Service",
-      "vv": {
+      "pv": {
         "nodeType": "service"
       }
     },
@@ -239,7 +232,7 @@
       "width": 120,
       "height": 60,
       "text": "Terminal",
-      "vv": {
+      "pv": {
         "nodeType": "terminal"
       }
     },
@@ -251,7 +244,7 @@
       "width": 120,
       "height": 60,
       "text": "Code Editor",
-      "vv": {
+      "pv": {
         "nodeType": "editor"
       }
     },
@@ -263,7 +256,7 @@
       "width": 120,
       "height": 60,
       "text": "UI Components",
-      "vv": {
+      "pv": {
         "nodeType": "ui"
       }
     },
@@ -275,7 +268,7 @@
       "width": 120,
       "height": 60,
       "text": "Agent State",
-      "vv": {
+      "pv": {
         "nodeType": "service"
       }
     },
@@ -287,7 +280,7 @@
       "width": 120,
       "height": 60,
       "text": "WebSocket",
-      "vv": {
+      "pv": {
         "nodeType": "websocket"
       }
     },
@@ -299,7 +292,7 @@
       "width": 120,
       "height": 60,
       "text": "API Endpoints",
-      "vv": {
+      "pv": {
         "nodeType": "api"
       }
     },
@@ -311,7 +304,7 @@
       "width": 120,
       "height": 60,
       "text": "i18n",
-      "vv": {
+      "pv": {
         "nodeType": "i18n"
       }
     },
@@ -323,7 +316,7 @@
       "width": 120,
       "height": 60,
       "text": "Mock Services",
-      "vv": {
+      "pv": {
         "nodeType": "mock"
       }
     },
@@ -335,7 +328,7 @@
       "width": 120,
       "height": 60,
       "text": "Type Definitions",
-      "vv": {
+      "pv": {
         "nodeType": "types"
       }
     },
@@ -347,7 +340,7 @@
       "width": 120,
       "height": 60,
       "text": "Utils",
-      "vv": {
+      "pv": {
         "nodeType": "utils"
       }
     }
@@ -357,8 +350,8 @@
       "id": "app_to_router",
       "fromNode": "app",
       "toNode": "router",
-      "text": "renders",
-      "vv": {
+      "label": "renders",
+      "pv": {
         "edgeType": "renders"
       }
     },
@@ -366,8 +359,8 @@
       "id": "router_to_root",
       "fromNode": "router",
       "toNode": "root_layout",
-      "text": "navigates",
-      "vv": {
+      "label": "navigates",
+      "pv": {
         "edgeType": "navigates"
       }
     },
@@ -375,8 +368,8 @@
       "id": "router_to_conversation",
       "fromNode": "router",
       "toNode": "conversation_route",
-      "text": "navigates",
-      "vv": {
+      "label": "navigates",
+      "pv": {
         "edgeType": "navigates"
       }
     },
@@ -384,8 +377,8 @@
       "id": "router_to_settings",
       "fromNode": "router",
       "toNode": "settings_route",
-      "text": "navigates",
-      "vv": {
+      "label": "navigates",
+      "pv": {
         "edgeType": "navigates"
       }
     },
@@ -393,8 +386,8 @@
       "id": "websocket_context_to_chat",
       "fromNode": "websocket_context",
       "toNode": "chat_service",
-      "text": "provides",
-      "vv": {
+      "label": "provides",
+      "pv": {
         "edgeType": "provides"
       }
     },
@@ -402,8 +395,8 @@
       "id": "conversation_to_chat",
       "fromNode": "conversation_route",
       "toNode": "chat_service",
-      "text": "uses",
-      "vv": {
+      "label": "uses",
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -411,8 +404,8 @@
       "id": "conversation_to_actions",
       "fromNode": "conversation_route",
       "toNode": "actions_service",
-      "text": "uses",
-      "vv": {
+      "label": "uses",
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -420,8 +413,8 @@
       "id": "conversation_to_terminal",
       "fromNode": "conversation_route",
       "toNode": "terminal_service",
-      "text": "uses",
-      "vv": {
+      "label": "uses",
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -429,8 +422,8 @@
       "id": "terminal_service_to_component",
       "fromNode": "terminal_service",
       "toNode": "terminal_component",
-      "text": "renders",
-      "vv": {
+      "label": "renders",
+      "pv": {
         "edgeType": "renders"
       }
     },
@@ -438,8 +431,8 @@
       "id": "actions_service_to_editor",
       "fromNode": "actions_service",
       "toNode": "editor_component",
-      "text": "renders",
-      "vv": {
+      "label": "renders",
+      "pv": {
         "edgeType": "renders"
       }
     },
@@ -447,8 +440,8 @@
       "id": "routes_to_ui",
       "fromNode": "root_layout",
       "toNode": "ui_components",
-      "text": "renders",
-      "vv": {
+      "label": "renders",
+      "pv": {
         "edgeType": "renders"
       }
     },
@@ -456,8 +449,8 @@
       "id": "agent_state_to_routes",
       "fromNode": "agent_state_service",
       "toNode": "conversation_route",
-      "text": "provides",
-      "vv": {
+      "label": "provides",
+      "pv": {
         "edgeType": "provides"
       }
     },
@@ -465,8 +458,8 @@
       "id": "websocket_context_to_connection",
       "fromNode": "websocket_context",
       "toNode": "websocket_connection",
-      "text": "websocket",
-      "vv": {
+      "label": "websocket",
+      "pv": {
         "edgeType": "websocket"
       }
     },
@@ -474,8 +467,8 @@
       "id": "services_to_api",
       "fromNode": "chat_service",
       "toNode": "api_endpoints",
-      "text": "calls",
-      "vv": {
+      "label": "calls",
+      "pv": {
         "edgeType": "calls"
       }
     },
@@ -483,8 +476,8 @@
       "id": "actions_to_api",
       "fromNode": "actions_service",
       "toNode": "api_endpoints",
-      "text": "calls",
-      "vv": {
+      "label": "calls",
+      "pv": {
         "edgeType": "calls"
       }
     },
@@ -492,8 +485,8 @@
       "id": "routes_to_i18n",
       "fromNode": "root_layout",
       "toNode": "i18n_config",
-      "text": "uses",
-      "vv": {
+      "label": "uses",
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -501,8 +494,8 @@
       "id": "mock_to_services",
       "fromNode": "mock_services",
       "toNode": "chat_service",
-      "text": "mocks",
-      "vv": {
+      "label": "mocks",
+      "pv": {
         "edgeType": "calls"
       }
     },
@@ -510,8 +503,8 @@
       "id": "components_to_types",
       "fromNode": "editor_component",
       "toNode": "types_definitions",
-      "text": "imports",
-      "vv": {
+      "label": "imports",
+      "pv": {
         "edgeType": "imports"
       }
     },
@@ -519,8 +512,8 @@
       "id": "services_to_utils",
       "fromNode": "chat_service",
       "toNode": "utils_functions",
-      "text": "imports",
-      "vv": {
+      "label": "imports",
+      "pv": {
         "edgeType": "imports"
       }
     }

@@ -1,0 +1,189 @@
+version: "1.0.0"
+
+nodeComponents:
+  agent:
+    description: "AI agent that processes tasks and executes actions"
+    icon: "🤖"
+    
+  runtime:
+    description: "Execution environment for agents"
+    icon: "⚡"
+    
+  llm:
+    description: "Large Language Model interface"
+    icon: "🧠"
+    
+  memory:
+    description: "Agent memory system"
+    icon: "💾"
+    
+  tools:
+    description: "Available tools for agent execution"
+    icon: "🔧"
+    
+  events:
+    description: "Event system for agent communication"
+    icon: "📡"
+    
+  security:
+    description: "Security and validation layer"
+    icon: "🔒"
+    
+  resolver:
+    description: "Issue resolution system"
+    icon: "🔧"
+    
+  browser:
+    description: "Web browser automation"
+    icon: "🌐"
+    
+  docker:
+    description: "Container runtime"
+    icon: "🐳"
+    
+  mcp:
+    description: "Model Context Protocol"
+    icon: "🔌"
+    
+  microagent:
+    description: "Specialized micro-agents"
+    icon: "🎯"
+    
+  integrations:
+    description: "External system integrations"
+    icon: "🔗"
+    
+  storage:
+    description: "Data persistence layer"
+    icon: "💽"
+    
+  frontend:
+    description: "Web interface"
+    icon: "🖥️"
+    
+  app_server:
+    description: "Main application server"
+    icon: "🖥️"
+    
+  codeact:
+    description: "CodeAct agent for coding tasks"
+    icon: "🤖"
+    
+  browsing:
+    description: "Browsing agent for web tasks"
+    icon: "🌐"
+    
+  readonly:
+    description: "Readonly agent for analysis"
+    icon: "👁️"
+    
+  loc:
+    description: "LOC agent for code exploration"
+    icon: "🔍"
+    
+  tool:
+    description: "Agent tool"
+    icon: "🔧"
+    
+  prompt:
+    description: "Prompt template"
+    icon: "📝"
+    
+  parser:
+    description: "Response parser"
+    icon: "🔧"
+    
+  function_calling:
+    description: "Function calling interface"
+    icon: "🔄"
+
+edgeComponents:
+  data_flow:
+    description: "Data flow between components"
+    style: "solid"
+    
+  control_flow:
+    description: "Control flow between components"
+    style: "dashed"
+    
+  event_flow:
+    description: "Event propagation"
+    style: "dotted"
+    
+  api_call:
+    description: "API communication"
+    style: "solid"
+    
+  dependency:
+    description: "Component dependency"
+    style: "dashed"
+    
+  extends:
+    description: "Agent extends base agent"
+    style: "dashed"
+    color: "#10b981"
+    
+  uses:
+    description: "Agent uses tool"
+    style: "solid"
+    color: "#3b82f6"
+    
+  calls:
+    description: "Calls LLM or service"
+    style: "solid"
+    color: "#f59e0b"
+    
+  loads:
+    description: "Loads prompt template"
+    style: "dotted"
+    color: "#8b5cf6"
+    
+  stores:
+    description: "Stores in memory"
+    style: "dashed"
+    color: "#a855f7"
+    
+  parses:
+    description: "Parses response"
+    style: "solid"
+    color: "#64748b"
+    
+  handles:
+    description: "Handles requests"
+    style: "solid"
+    
+  manages:
+    description: "Manages resources"
+    style: "solid"
+    
+  authenticates:
+    description: "Authentication flow"
+    style: "solid"
+    
+  configures:
+    description: "Configuration"
+    style: "dashed"
+    
+  websocket:
+    description: "WebSocket connection"
+    style: "solid"
+    
+  validates:
+    description: "Validation"
+    style: "solid"
+    
+  renders:
+    description: "UI rendering"
+    style: "solid"
+    
+  navigates:
+    description: "Navigation"
+    style: "solid"
+    
+  provides:
+    description: "Provides data/service"
+    style: "solid"
+    
+  imports:
+    description: "Import dependency"
+    style: "dashed"

@@ -1,5 +1,5 @@
 {
-  "vv": {
+  "pv": {
     "name": "OpenHands Backend Architecture",
     "version": "1.0.0",
     "nodeTypes": {
@@ -72,38 +72,31 @@
     "edgeTypes": {
       "handles": {
         "style": "solid",
-        "color": "#3b82f6",
-        "description": "Route handles HTTP requests"
+        "color": "#3b82f6"
       },
       "calls": {
         "style": "solid",
-        "color": "#f59e0b",
-        "description": "Service calls another service"
+        "color": "#f59e0b"
       },
       "manages": {
         "style": "dashed",
-        "color": "#ef4444",
-        "description": "Manager coordinates components"
+        "color": "#ef4444"
       },
       "authenticates": {
         "style": "solid",
-        "color": "#dc2626",
-        "description": "Authentication check"
+        "color": "#dc2626"
       },
       "configures": {
         "style": "dotted",
-        "color": "#64748b",
-        "description": "Configuration dependency"
+        "color": "#64748b"
       },
       "websocket": {
         "style": "dashed",
-        "color": "#a855f7",
-        "description": "WebSocket communication"
+        "color": "#a855f7"
       },
       "validates": {
         "style": "solid",
-        "color": "#84cc16",
-        "description": "Data validation"
+        "color": "#84cc16"
       }
     }
   },
@@ -116,7 +109,7 @@
       "width": 120,
       "height": 60,
       "text": "FastAPI App",
-      "vv": {
+      "pv": {
         "nodeType": "app"
       }
     },
@@ -128,7 +121,7 @@
       "width": 120,
       "height": 60,
       "text": "API Router",
-      "vv": {
+      "pv": {
         "nodeType": "router"
       }
     },
@@ -140,7 +133,7 @@
       "width": 120,
       "height": 60,
       "text": "Conversation",
-      "vv": {
+      "pv": {
         "nodeType": "route"
       }
     },
@@ -152,7 +145,7 @@
       "width": 120,
       "height": 60,
       "text": "Files",
-      "vv": {
+      "pv": {
         "nodeType": "route"
       }
     },
@@ -164,7 +157,7 @@
       "width": 120,
       "height": 60,
       "text": "Settings",
-      "vv": {
+      "pv": {
         "nodeType": "route"
       }
     },
@@ -176,7 +169,7 @@
       "width": 120,
       "height": 60,
       "text": "Conversation Manager",
-      "vv": {
+      "pv": {
         "nodeType": "manager"
       }
     },
@@ -188,7 +181,7 @@
       "width": 120,
       "height": 60,
       "text": "Conversation Service",
-      "vv": {
+      "pv": {
         "nodeType": "service"
       }
     },
@@ -200,7 +193,7 @@
       "width": 120,
       "height": 60,
       "text": "File Service",
-      "vv": {
+      "pv": {
         "nodeType": "file_service"
       }
     },
@@ -212,7 +205,7 @@
       "width": 120,
       "height": 60,
       "text": "Session Manager",
-      "vv": {
+      "pv": {
         "nodeType": "session"
       }
     },
@@ -224,7 +217,7 @@
       "width": 120,
       "height": 60,
       "text": "Agent Session",
-      "vv": {
+      "pv": {
         "nodeType": "session"
       }
     },
@@ -236,7 +229,7 @@
       "width": 120,
       "height": 60,
       "text": "WebSocket Handler",
-      "vv": {
+      "pv": {
         "nodeType": "websocket"
       }
     },
@@ -248,7 +241,7 @@
       "width": 120,
       "height": 60,
       "text": "Auth Service",
-      "vv": {
+      "pv": {
         "nodeType": "auth"
       }
     },
@@ -260,7 +253,7 @@
       "width": 120,
       "height": 60,
       "text": "Middleware",
-      "vv": {
+      "pv": {
         "nodeType": "middleware"
       }
     },
@@ -272,7 +265,7 @@
       "width": 120,
       "height": 60,
       "text": "Config",
-      "vv": {
+      "pv": {
         "nodeType": "config"
       }
     },
@@ -284,7 +277,7 @@
       "width": 120,
       "height": 60,
       "text": "Monitoring",
-      "vv": {
+      "pv": {
         "nodeType": "monitoring"
       }
     },
@@ -296,7 +289,7 @@
       "width": 120,
       "height": 60,
       "text": "Data Models",
-      "vv": {
+      "pv": {
         "nodeType": "data_model"
       }
     },
@@ -308,7 +301,7 @@
       "width": 120,
       "height": 60,
       "text": "Conversation Info",
-      "vv": {
+      "pv": {
         "nodeType": "data_model"
       }
     },
@@ -320,7 +313,7 @@
       "width": 120,
       "height": 60,
       "text": "Agent Loop Info",
-      "vv": {
+      "pv": {
         "nodeType": "data_model"
       }
     }
@@ -330,8 +323,8 @@
       "id": "app_to_router",
       "fromNode": "fastapi_app",
       "toNode": "api_router",
-      "text": "includes",
-      "vv": {
+      "label": "includes",
+      "pv": {
         "edgeType": "handles"
       }
     },
@@ -339,8 +332,8 @@
       "id": "router_to_conversation",
       "fromNode": "api_router",
       "toNode": "conversation_route",
-      "text": "routes",
-      "vv": {
+      "label": "routes",
+      "pv": {
         "edgeType": "handles"
       }
     },
@@ -348,8 +341,8 @@
       "id": "router_to_files",
       "fromNode": "api_router",
       "toNode": "files_route",
-      "text": "routes",
-      "vv": {
+      "label": "routes",
+      "pv": {
         "edgeType": "handles"
       }
     },
@@ -357,8 +350,8 @@
       "id": "router_to_settings",
       "fromNode": "api_router",
       "toNode": "settings_route",
-      "text": "routes",
-      "vv": {
+      "label": "routes",
+      "pv": {
         "edgeType": "handles"
       }
     },
@@ -366,8 +359,8 @@
       "id": "conversation_to_manager",
       "fromNode": "conversation_route",
       "toNode": "conversation_manager",
-      "text": "calls",
-      "vv": {
+      "label": "calls",
+      "pv": {
         "edgeType": "calls"
       }
     },
@@ -375,8 +368,8 @@
       "id": "manager_to_service",
       "fromNode": "conversation_manager",
       "toNode": "conversation_service",
-      "text": "manages",
-      "vv": {
+      "label": "manages",
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -384,8 +377,8 @@
       "id": "files_to_service",
       "fromNode": "files_route",
       "toNode": "file_service",
-      "text": "calls",
-      "vv": {
+      "label": "calls",
+      "pv": {
         "edgeType": "calls"
       }
     },
@@ -393,8 +386,8 @@
       "id": "manager_to_session",
       "fromNode": "conversation_manager",
       "toNode": "session_manager",
-      "text": "manages",
-      "vv": {
+      "label": "manages",
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -402,8 +395,8 @@
       "id": "session_to_agent",
       "fromNode": "session_manager",
       "toNode": "agent_session",
-      "text": "creates",
-      "vv": {
+      "label": "creates",
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -411,8 +404,8 @@
       "id": "conversation_to_websocket",
       "fromNode": "conversation_route",
       "toNode": "websocket_handler",
-      "text": "websocket",
-      "vv": {
+      "label": "websocket",
+      "pv": {
         "edgeType": "websocket"
       }
     },
@@ -420,8 +413,8 @@
       "id": "settings_to_auth",
       "fromNode": "settings_route",
       "toNode": "auth_service",
-      "text": "authenticates",
-      "vv": {
+      "label": "authenticates",
+      "pv": {
         "edgeType": "authenticates"
       }
     },
@@ -429,8 +422,8 @@
       "id": "app_to_middleware",
       "fromNode": "fastapi_app",
       "toNode": "middleware",
-      "text": "applies",
-      "vv": {
+      "label": "applies",
+      "pv": {
         "edgeType": "validates"
       }
     },
@@ -438,8 +431,8 @@
       "id": "app_to_config",
       "fromNode": "fastapi_app",
       "toNode": "config",
-      "text": "configures",
-      "vv": {
+      "label": "configures",
+      "pv": {
         "edgeType": "configures"
       }
     },
@@ -447,8 +440,8 @@
       "id": "app_to_monitoring",
       "fromNode": "fastapi_app",
       "toNode": "monitoring",
-      "text": "monitors",
-      "vv": {
+      "label": "monitors",
+      "pv": {
         "edgeType": "validates"
       }
     },
@@ -456,8 +449,8 @@
       "id": "routes_to_models",
       "fromNode": "conversation_route",
       "toNode": "data_models",
-      "text": "validates",
-      "vv": {
+      "label": "validates",
+      "pv": {
         "edgeType": "validates"
       }
     },
@@ -465,8 +458,8 @@
       "id": "service_to_conversation_info",
       "fromNode": "conversation_service",
       "toNode": "conversation_info",
-      "text": "uses",
-      "vv": {
+      "label": "uses",
+      "pv": {
         "edgeType": "calls"
       }
     },
@@ -474,8 +467,8 @@
       "id": "manager_to_agent_loop",
       "fromNode": "conversation_manager",
       "toNode": "agent_loop_info",
-      "text": "tracks",
-      "vv": {
+      "label": "tracks",
+      "pv": {
         "edgeType": "manages"
       }
     }
