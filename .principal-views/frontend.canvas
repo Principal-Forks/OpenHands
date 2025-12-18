@@ -350,6 +350,8 @@
       "id": "app_to_router",
       "fromNode": "app",
       "toNode": "router",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "renders",
       "pv": {
         "edgeType": "renders"
@@ -359,6 +361,8 @@
       "id": "router_to_root",
       "fromNode": "router",
       "toNode": "root_layout",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "navigates",
       "pv": {
         "edgeType": "navigates"
@@ -368,6 +372,8 @@
       "id": "router_to_conversation",
       "fromNode": "router",
       "toNode": "conversation_route",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "navigates",
       "pv": {
         "edgeType": "navigates"
@@ -377,6 +383,8 @@
       "id": "router_to_settings",
       "fromNode": "router",
       "toNode": "settings_route",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "navigates",
       "pv": {
         "edgeType": "navigates"
@@ -386,6 +394,8 @@
       "id": "websocket_context_to_chat",
       "fromNode": "websocket_context",
       "toNode": "chat_service",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "provides",
       "pv": {
         "edgeType": "provides"
@@ -395,6 +405,8 @@
       "id": "conversation_to_chat",
       "fromNode": "conversation_route",
       "toNode": "chat_service",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -404,6 +416,8 @@
       "id": "conversation_to_actions",
       "fromNode": "conversation_route",
       "toNode": "actions_service",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -413,6 +427,8 @@
       "id": "conversation_to_terminal",
       "fromNode": "conversation_route",
       "toNode": "terminal_service",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -422,6 +438,8 @@
       "id": "terminal_service_to_component",
       "fromNode": "terminal_service",
       "toNode": "terminal_component",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "renders",
       "pv": {
         "edgeType": "renders"
@@ -431,6 +449,8 @@
       "id": "actions_service_to_editor",
       "fromNode": "actions_service",
       "toNode": "editor_component",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "renders",
       "pv": {
         "edgeType": "renders"
@@ -440,6 +460,8 @@
       "id": "routes_to_ui",
       "fromNode": "root_layout",
       "toNode": "ui_components",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "renders",
       "pv": {
         "edgeType": "renders"
@@ -449,6 +471,8 @@
       "id": "agent_state_to_routes",
       "fromNode": "agent_state_service",
       "toNode": "conversation_route",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "provides",
       "pv": {
         "edgeType": "provides"
@@ -458,6 +482,8 @@
       "id": "websocket_context_to_connection",
       "fromNode": "websocket_context",
       "toNode": "websocket_connection",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "websocket",
       "pv": {
         "edgeType": "websocket"
@@ -467,6 +493,8 @@
       "id": "services_to_api",
       "fromNode": "chat_service",
       "toNode": "api_endpoints",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "calls",
       "pv": {
         "edgeType": "calls"
@@ -476,6 +504,8 @@
       "id": "actions_to_api",
       "fromNode": "actions_service",
       "toNode": "api_endpoints",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "calls",
       "pv": {
         "edgeType": "calls"
@@ -485,6 +515,8 @@
       "id": "routes_to_i18n",
       "fromNode": "root_layout",
       "toNode": "i18n_config",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -494,6 +526,8 @@
       "id": "mock_to_services",
       "fromNode": "mock_services",
       "toNode": "chat_service",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "mocks",
       "pv": {
         "edgeType": "calls"
@@ -503,6 +537,8 @@
       "id": "components_to_types",
       "fromNode": "editor_component",
       "toNode": "types_definitions",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "imports",
       "pv": {
         "edgeType": "imports"
@@ -512,6 +548,8 @@
       "id": "services_to_utils",
       "fromNode": "chat_service",
       "toNode": "utils_functions",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "imports",
       "pv": {
         "edgeType": "imports"

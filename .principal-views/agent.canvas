@@ -238,6 +238,8 @@
       "id": "codeact_extends_base",
       "fromNode": "base_agent",
       "toNode": "codeact_agent",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "extends",
       "pv": {
         "edgeType": "extends"
@@ -247,6 +249,8 @@
       "id": "browsing_extends_base",
       "fromNode": "base_agent",
       "toNode": "browsing_agent",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "extends",
       "pv": {
         "edgeType": "extends"
@@ -256,6 +260,8 @@
       "id": "readonly_extends_base",
       "fromNode": "base_agent",
       "toNode": "readonly_agent",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "extends",
       "pv": {
         "edgeType": "extends"
@@ -265,6 +271,8 @@
       "id": "loc_extends_base",
       "fromNode": "base_agent",
       "toNode": "loc_agent",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "extends",
       "pv": {
         "edgeType": "extends"
@@ -274,6 +282,8 @@
       "id": "codeact_uses_bash",
       "fromNode": "codeact_agent",
       "toNode": "bash_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -283,6 +293,8 @@
       "id": "codeact_uses_editor",
       "fromNode": "codeact_agent",
       "toNode": "editor_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -292,6 +304,8 @@
       "id": "codeact_uses_ipython",
       "fromNode": "codeact_agent",
       "toNode": "ipython_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -301,6 +315,8 @@
       "id": "browsing_uses_browser",
       "fromNode": "browsing_agent",
       "toNode": "browser_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -310,6 +326,8 @@
       "id": "readonly_uses_view",
       "fromNode": "readonly_agent",
       "toNode": "view_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -319,6 +337,8 @@
       "id": "readonly_uses_search",
       "fromNode": "readonly_agent",
       "toNode": "search_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -328,6 +348,8 @@
       "id": "loc_uses_explore",
       "fromNode": "loc_agent",
       "toNode": "explore_tool",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "uses"
@@ -337,6 +359,8 @@
       "id": "agents_load_system",
       "fromNode": "codeact_agent",
       "toNode": "system_prompt",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "loads",
       "pv": {
         "edgeType": "loads"
@@ -346,6 +370,8 @@
       "id": "agents_load_user",
       "fromNode": "codeact_agent",
       "toNode": "user_prompt",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "loads",
       "pv": {
         "edgeType": "loads"
@@ -355,6 +381,8 @@
       "id": "agents_call_llm",
       "fromNode": "codeact_agent",
       "toNode": "llm_interface",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "calls",
       "pv": {
         "edgeType": "calls"
@@ -364,6 +392,8 @@
       "id": "agents_use_memory",
       "fromNode": "codeact_agent",
       "toNode": "agent_memory",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "stores",
       "pv": {
         "edgeType": "stores"
@@ -373,6 +403,8 @@
       "id": "agents_parse_response",
       "fromNode": "llm_interface",
       "toNode": "response_parser",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "parses",
       "pv": {
         "edgeType": "parses"
@@ -382,6 +414,8 @@
       "id": "agents_function_call",
       "fromNode": "response_parser",
       "toNode": "function_calling",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "calls",
       "pv": {
         "edgeType": "calls"
@@ -391,6 +425,8 @@
       "id": "tools_security_check",
       "fromNode": "bash_tool",
       "toNode": "security_utils",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "validates",
       "pv": {
         "edgeType": "uses"

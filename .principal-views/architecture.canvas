@@ -318,6 +318,8 @@
       "id": "llm_to_agent",
       "fromNode": "llm",
       "toNode": "agent",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "LLM API",
       "pv": {
         "edgeType": "api_call"
@@ -327,6 +329,8 @@
       "id": "agent_to_memory",
       "fromNode": "agent",
       "toNode": "memory",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "Store/Retrieve",
       "pv": {
         "edgeType": "data_flow"
@@ -336,6 +340,8 @@
       "id": "agent_to_runtime",
       "fromNode": "agent",
       "toNode": "runtime",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Execute",
       "pv": {
         "edgeType": "control_flow"
@@ -345,6 +351,8 @@
       "id": "runtime_to_tools",
       "fromNode": "runtime",
       "toNode": "tools",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "Use Tools",
       "pv": {
         "edgeType": "control_flow"
@@ -354,6 +362,8 @@
       "id": "agent_to_events",
       "fromNode": "agent",
       "toNode": "events",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "Emit Events",
       "pv": {
         "edgeType": "event_flow"
@@ -363,6 +373,8 @@
       "id": "security_to_agent",
       "fromNode": "security",
       "toNode": "agent",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "Validate",
       "pv": {
         "edgeType": "control_flow"
@@ -372,6 +384,8 @@
       "id": "tools_to_browser",
       "fromNode": "tools",
       "toNode": "browser",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Browser API",
       "pv": {
         "edgeType": "api_call"
@@ -381,6 +395,8 @@
       "id": "runtime_to_docker",
       "fromNode": "runtime",
       "toNode": "docker",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Container API",
       "pv": {
         "edgeType": "api_call"
@@ -390,6 +406,8 @@
       "id": "tools_to_mcp",
       "fromNode": "tools",
       "toNode": "mcp",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "MCP Protocol",
       "pv": {
         "edgeType": "api_call"
@@ -399,6 +417,8 @@
       "id": "agent_to_resolver",
       "fromNode": "agent",
       "toNode": "resolver",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Resolve Issues",
       "pv": {
         "edgeType": "control_flow"
@@ -408,6 +428,8 @@
       "id": "microagent_to_agent",
       "fromNode": "microagent",
       "toNode": "agent",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "Specialized Tasks",
       "pv": {
         "edgeType": "control_flow"
@@ -417,6 +439,8 @@
       "id": "integrations_to_agent",
       "fromNode": "integrations",
       "toNode": "agent",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "External Data",
       "pv": {
         "edgeType": "data_flow"
@@ -426,6 +450,8 @@
       "id": "events_to_storage",
       "fromNode": "events",
       "toNode": "storage",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Persist Events",
       "pv": {
         "edgeType": "data_flow"
@@ -435,6 +461,8 @@
       "id": "memory_to_storage",
       "fromNode": "memory",
       "toNode": "storage",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Persist Memory",
       "pv": {
         "edgeType": "data_flow"
@@ -444,6 +472,8 @@
       "id": "frontend_to_app_server",
       "fromNode": "frontend",
       "toNode": "app_server",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Web API",
       "pv": {
         "edgeType": "api_call"
@@ -453,6 +483,8 @@
       "id": "app_server_to_storage",
       "fromNode": "app_server",
       "toNode": "storage",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "Data Access",
       "pv": {
         "edgeType": "data_flow"
@@ -462,6 +494,8 @@
       "id": "docker_to_storage",
       "fromNode": "docker",
       "toNode": "storage",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "Container Data",
       "pv": {
         "edgeType": "data_flow"

@@ -323,6 +323,8 @@
       "id": "app_to_router",
       "fromNode": "fastapi_app",
       "toNode": "api_router",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "includes",
       "pv": {
         "edgeType": "handles"
@@ -332,6 +334,8 @@
       "id": "router_to_conversation",
       "fromNode": "api_router",
       "toNode": "conversation_route",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "routes",
       "pv": {
         "edgeType": "handles"
@@ -341,6 +345,8 @@
       "id": "router_to_files",
       "fromNode": "api_router",
       "toNode": "files_route",
+      "fromSide": "right",
+      "toSide": "top",
       "label": "routes",
       "pv": {
         "edgeType": "handles"
@@ -350,6 +356,8 @@
       "id": "router_to_settings",
       "fromNode": "api_router",
       "toNode": "settings_route",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "routes",
       "pv": {
         "edgeType": "handles"
@@ -359,6 +367,8 @@
       "id": "conversation_to_manager",
       "fromNode": "conversation_route",
       "toNode": "conversation_manager",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "calls",
       "pv": {
         "edgeType": "calls"
@@ -368,6 +378,8 @@
       "id": "manager_to_service",
       "fromNode": "conversation_manager",
       "toNode": "conversation_service",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "manages",
       "pv": {
         "edgeType": "manages"
@@ -377,6 +389,8 @@
       "id": "files_to_service",
       "fromNode": "files_route",
       "toNode": "file_service",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "calls",
       "pv": {
         "edgeType": "calls"
@@ -386,6 +400,8 @@
       "id": "manager_to_session",
       "fromNode": "conversation_manager",
       "toNode": "session_manager",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "manages",
       "pv": {
         "edgeType": "manages"
@@ -395,6 +411,8 @@
       "id": "session_to_agent",
       "fromNode": "session_manager",
       "toNode": "agent_session",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "creates",
       "pv": {
         "edgeType": "manages"
@@ -404,6 +422,8 @@
       "id": "conversation_to_websocket",
       "fromNode": "conversation_route",
       "toNode": "websocket_handler",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "websocket",
       "pv": {
         "edgeType": "websocket"
@@ -413,6 +433,8 @@
       "id": "settings_to_auth",
       "fromNode": "settings_route",
       "toNode": "auth_service",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "authenticates",
       "pv": {
         "edgeType": "authenticates"
@@ -422,6 +444,8 @@
       "id": "app_to_middleware",
       "fromNode": "fastapi_app",
       "toNode": "middleware",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "applies",
       "pv": {
         "edgeType": "validates"
@@ -431,6 +455,8 @@
       "id": "app_to_config",
       "fromNode": "fastapi_app",
       "toNode": "config",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "configures",
       "pv": {
         "edgeType": "configures"
@@ -440,6 +466,8 @@
       "id": "app_to_monitoring",
       "fromNode": "fastapi_app",
       "toNode": "monitoring",
+      "fromSide": "left",
+      "toSide": "right",
       "label": "monitors",
       "pv": {
         "edgeType": "validates"
@@ -449,6 +477,8 @@
       "id": "routes_to_models",
       "fromNode": "conversation_route",
       "toNode": "data_models",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "validates",
       "pv": {
         "edgeType": "validates"
@@ -458,6 +488,8 @@
       "id": "service_to_conversation_info",
       "fromNode": "conversation_service",
       "toNode": "conversation_info",
+      "fromSide": "bottom",
+      "toSide": "top",
       "label": "uses",
       "pv": {
         "edgeType": "calls"
@@ -467,6 +499,8 @@
       "id": "manager_to_agent_loop",
       "fromNode": "conversation_manager",
       "toNode": "agent_loop_info",
+      "fromSide": "right",
+      "toSide": "left",
       "label": "tracks",
       "pv": {
         "edgeType": "manages"
